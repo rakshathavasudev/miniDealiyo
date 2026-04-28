@@ -1,4 +1,4 @@
-# Dealyo — AI Transaction Coordinator
+# miniDealyo — AI Transaction Coordinator
 
 An AI-native pipeline that replaces manual Transaction Coordinator work in real estate. Built as a pet project to explore how Claude skills can power real production workflows.
 
