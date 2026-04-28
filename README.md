@@ -16,7 +16,7 @@ Real estate deals today are managed manually — transaction coordinators track 
 | Missing doc detection | `doc_detector v1.0` | Identifies expected-but-missing docs and drafts follow-up emails automatically |
 | Deal health scoring | `health_advisor v1.0` | Rule-based 0-100 score + Claude-powered action recommendations for at-risk deals |
 | PDF contract extraction | `contract_extractor v1.0` | Upload a purchase agreement → 20+ structured fields + sorted deadline timeline |
-| Email polling agent | — | Watches `new@dealyo.co` via IMAP, auto-ingests every incoming email |
+| Email polling agent | — | Watches configured inbox via IMAP, auto-ingests every incoming email |
 
 ---
 
@@ -194,7 +194,7 @@ Invoke-RestMethod -Uri "http://localhost:8000/extract-pdf" `
 ## Architecture
 
 ```
-new@dealyo.co (email)
+Configured inbox (email)
        ↓
   agent.py (IMAP poll every 60s)
        ↓
@@ -222,8 +222,8 @@ new@dealyo.co (email)
 ANTHROPIC_API_KEY=sk-ant-...
 
 # Email agent (optional)
-IMAP_HOST=
-IMAP_USER=
+IMAP_HOST=imap.gmail.com
+IMAP_USER=your-email@gmail.com
 IMAP_PASS=your-16-char-app-password   # Gmail App Password, not your regular password
 POLL_INTERVAL=60
 
