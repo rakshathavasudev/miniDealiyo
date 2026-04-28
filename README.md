@@ -222,8 +222,8 @@ new@dealyo.co (email)
 ANTHROPIC_API_KEY=sk-ant-...
 
 # Email agent (optional)
-IMAP_HOST=imap.gmail.com
-IMAP_USER=new@dealyo.co
+IMAP_HOST=
+IMAP_USER=
 IMAP_PASS=your-16-char-app-password   # Gmail App Password, not your regular password
 POLL_INTERVAL=60
 
